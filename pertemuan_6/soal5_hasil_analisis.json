@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "sumber": "https://jsonplaceholder.typicode.com",
+    "waktu_analisis": "2026-10-29 16:00:41",
+    "teknik_digunakan": [
+      "map()",
+      "filter()",
+      "sorted()",
+      "lambda",
+      "requests",
+      "json"
+    ]
+  },
+  "posts": {
+    "total_posts": 100,
+    "rata_panjang_judul": 39.52,
+    "judul_panjang_count": 45,
+    "posts_user_1_2_3_count": 30,
+    "top5_judul_terpanjang": [
+      {
+        "id": 50,
+        "userId": 5,
+        "judul": "repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem",
+        "panjang": 79
+      },
+      {
+        "id": 43,
+        "userId": 5,
+        "judul": "eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis",
+        "panjang": 78
+      },
+      {
+        "id": 60,
+        "userId": 6,
+        "judul": "consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere",
+        "panjang": 76
+      },
+      {
+        "id": 84,
+        "userId": 9,
+        "judul": "optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut",
+        "panjang": 76
+      },
+      {
+        "id": 1,
+        "userId": 1,
+        "judul": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+        "panjang": 74
+      }
+    ],
+    "jumlah_post_per_user": [
+      {
+        "userId": 1,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 2,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 3,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 4,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 5,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 6,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 7,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 8,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 9,
+        "jumlah_post": 10
+      },
+      {
+        "userId": 10,
+        "jumlah_post": 10
+      }
+    ],
+    "contoh_judul_panjang": [
+      {
+        "id": 1,
+        "judul": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+      },
+      {
+        "id": 3,
+        "judul": "ea molestias quasi exercitationem repellat qui ipsa sit aut"
+      },
+      {
+        "id": 9,
+        "judul": "nesciunt iure omnis dolorem tempora et accusantium"
+      }
+    ]
+  },
+  "users": {
+    "total_users": 10,
+    "domain_unik": [
+      "annie.ca",
+      "april.biz",
+      "billy.biz",
+      "dana.io",
+      "jasper.info",
+      "karina.biz",
+      "kory.org",
+      "melissa.tv",
+      "rosamond.me",
+      "yesenia.net"
+    ],
+    "users_email_biz_count": 3,
+    "users_email_biz": [
+      "Sincere@april.biz",
+      "Telly.Hoeger@billy.biz",
+      "Rey.Padberg@karina.biz"
+    ],
+    "username_terpanjang": {
+      "username": "Leopoldo_Corkery",
+      "panjang": 16
+    },
+    "daftar_user_sorted_nama": [
+      {
+        "id": 5,
+        "nama": "Chelsey Dietrich",
+        "username": "Kamren",
+        "email": "Lucio_Hettinger@annie.ca",
+        "kota": "Roscoeview",
+        "domain_email": "annie.ca"
+      },
+      {
+        "id": 10,
+        "nama": "Clementina DuBuque",
+        "username": "Moriah.Stanton",
+        "email": "Rey.Padberg@karina.biz",
+        "kota": "Lebsackbury",
+        "domain_email": "karina.biz"
+      },
+      {
+        "id": 3,
+        "nama": "Clementine Bauch",
+        "username": "Samantha",
+        "email": "Nathan@yesenia.net",
+        "kota": "McKenziehaven",
+        "domain_email": "yesenia.net"
+      },
+      {
+        "id": 2,
+        "nama": "Ervin Howell",
+        "username": "Antonette",
+        "email": "Shanna@melissa.tv",
+        "kota": "Wisokyburgh",
+        "domain_email": "melissa.tv"
+      },
+      {
+        "id": 9,
+        "nama": "Glenna Reichert",
+        "username": "Delphine",
+        "email": "Chaim_McDermott@dana.io",
+        "kota": "Bartholomebury",
+        "domain_email": "dana.io"
+      },
+      {
+        "id": 7,
+        "nama": "Kurtis Weissnat",
+        "username": "Elwyn.Skiles",
+        "email": "Telly.Hoeger@billy.biz",
+        "kota": "Howemouth",
+        "domain_email": "billy.biz"
+      },
+      {
+        "id": 1,
+        "nama": "Leanne Graham",
+        "username": "Bret",
+        "email": "Sincere@april.biz",
+        "kota": "Gwenborough",
+        "domain_email": "april.biz"
+      },
+      {
+        "id": 6,
+        "nama": "Mrs. Dennis Schulist",
+        "username": "Leopoldo_Corkery",
+        "email": "Karley_Dach@jasper.info",
+        "kota": "South Christy",
+        "domain_email": "jasper.info"
+      },
+      {
+        "id": 8,
+        "nama": "Nicholas Runolfsdottir V",
+        "username": "Maxime_Nienow",
+        "email": "Sherwood@rosamond.me",
+        "kota": "Aliyaview",
+        "domain_email": "rosamond.me"
+      },
+      {
+        "id": 4,
+        "nama": "Patricia Lebsack",
+        "username": "Karianne",
+        "email": "Julianne.OConner@kory.org",
+        "kota": "South Elvis",
+        "domain_email": "kory.org"
+      }
+    ],
+    "kota_unik": [
+      "Aliyaview",
+      "Bartholomebury",
+      "Gwenborough",
+      "Howemouth",
+      "Lebsackbury",
+      "McKenziehaven",
+      "Roscoeview",
+      "South Christy",
+      "South Elvis",
+      "Wisokyburgh"
+    ]
+  },
+  "comments": {
+    "total_comments": 500,
+    "rata_panjang_body": 161.53,
+    "komentar_panjang_count": 459,
+    "komentar_net_count": 47,
+    "top5_komentar_terpanjang": [
+      {
+        "id": 22,
+        "postId": 5,
+        "email": "Khalil@emile.co.uk",
+        "panjang": 263
+      },
+      {
+        "id": 374,
+        "postId": 75,
+        "email": "Lacey@novella.biz",
+        "panjang": 247
+      },
+      {
+        "id": 140,
+        "postId": 28,
+        "email": "Mathias@richmond.info",
+        "panjang": 244
+      },
+      {
+        "id": 278,
+        "postId": 56,
+        "email": "Natalia@caitlyn.ca",
+        "panjang": 243
+      },
+      {
+        "id": 366,
+        "postId": 74,
+        "email": "Pablo.Ritchie@tyrique.co.uk",
+        "panjang": 239
+      }
+    ],
+    "top5_post_terbanyak_komentar": [
+      {
+        "postId": 1,
+        "jumlah_komentar": 5
+      },
+      {
+        "postId": 2,
+        "jumlah_komentar": 5
+      },
+      {
+        "postId": 3,
+        "jumlah_komentar": 5
+      },
+      {
+        "postId": 4,
+        "jumlah_komentar": 5
+      },
+      {
+        "postId": 5,
+        "jumlah_komentar": 5
+      }
+    ]
+  }
+}
