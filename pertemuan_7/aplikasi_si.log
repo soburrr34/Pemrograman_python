@@ -1,9 +1,9 @@
-2026-11-03 09:28:38 | DEBUG    | [SI_Akademik] Koneksi pool database PostgreSQL diinisialisasi (Host: localhost:5432, PoolSize: 10)
-2026-11-03 09:28:38 | DEBUG    | [SI_Akademik] Query SQL: SELECT * FROM mahasiswa WHERE status = 'aktif' executed in 0.0035s
-2026-11-03 09:28:38 | INFO     | [SI_Akademik] Pengguna 'sobur_2024' berhasil login dari IP 192.168.1.100
-2026-11-03 09:28:38 | INFO     | [SI_Akademik] Mahasiswa NIM 20241320046 berhasil mengajukan Rencana Studi (KRS) Semester 3
-2026-11-03 09:28:38 | WARNING  | [SI_Akademik] Kapasitas kuota mata kuliah 'Pemrograman Python Modern' tersisa 1 kursi!
-2026-11-03 09:28:38 | WARNING  | [SI_Akademik] Percobaan login gagal untuk user 'admin_si' (Percobaan ke-2 dari 3)
-2026-11-03 09:28:38 | ERROR    | [SI_Akademik] Gagal mengirim email notifikasi ke 'mahasiswa@kampus.ac.id': SMTP Connection Timeout
-2026-11-03 09:28:38 | ERROR    | [SI_Akademik] Gagal memproses pembayaran tagihan UKT #INV-2026-8891: Gateway timeout (504)
-2026-11-03 09:28:38 | CRITICAL | [SI_Akademik] Database utama terputus tidak terduga! Mengaktifkan mode read-only failover.
+2026-11-03 11:33:35 | DEBUG    | [SI_Akademik] Koneksi pool database PostgreSQL diinisialisasi (Host: localhost:5432, PoolSize: 10)
+2026-11-03 11:33:35 | DEBUG    | [SI_Akademik] Query SQL: SELECT * FROM mahasiswa WHERE status = 'aktif' executed in 0.0035s
+2026-11-03 11:33:35 | INFO     | [SI_Akademik] Pengguna 'sobur_2024' berhasil login dari IP 192.168.1.100
+2026-11-03 11:33:35 | INFO     | [SI_Akademik] Mahasiswa NIM 20241320046 berhasil mengajukan Rencana Studi (KRS) Semester 3
+2026-11-03 11:33:35 | WARNING  | [SI_Akademik] Kapasitas kuota mata kuliah 'Pemrograman Python Modern' tersisa 1 kursi!
+2026-11-03 11:33:35 | WARNING  | [SI_Akademik] Percobaan login gagal untuk user 'admin_si' (Percobaan ke-2 dari 3)
+2026-11-03 11:33:35 | ERROR    | [SI_Akademik] Gagal mengirim email notifikasi ke 'mahasiswa@kampus.ac.id': SMTP Connection Timeout
+2026-11-03 11:33:35 | ERROR    | [SI_Akademik] Gagal memproses pembayaran tagihan UKT #INV-2026-8891: Gateway timeout (504)
+2026-11-03 11:33:35 | CRITICAL | [SI_Akademik] Database utama terputus tidak terduga! Mengaktifkan mode read-only failover.
