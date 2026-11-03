@@ -3,15 +3,17 @@ Script Pembuat Laporan Word - Pertemuan 5
 ==========================================
 Membuat file laporan .docx untuk Pertemuan 5 Pemrograman Python
 yang berisi penjelasan, source code, dan analisis semua soal.
+Topik: Struktur Data Python (String, List, Set, Dictionary & Tuple).
+Penyusun: Sobur (NIM: 20241320046)
 """
 
+import os
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
-import os
 
 
 # ─── Helper Functions ────────────────────────────────────────────────────────
@@ -141,21 +143,22 @@ def buat_sampul(doc):
     p.paragraph_format.space_after = Pt(30)
 
     doc.add_paragraph()
-    doc.add_paragraph()
 
     # Tabel info mahasiswa
-    table = doc.add_table(rows=6, cols=2)
+    info = [
+        ('Nama Mahasiswa', 'Sobur'),
+        ('NIM',            '20241320046'),
+        ('Kelas',          'A1'),
+        ('Program Studi',  'Teknik Informatika / Sistem Informasi'),
+        ('Mata Kuliah',    'Pemrograman Python / Pemrograman Modern'),
+        ('Pertemuan',      '5 (Lima)'),
+        ('Topik',          'Struktur Data: String, List, Set, Dictionary & Tuple'),
+        ('Semester',       'Ganjil 2024/2025'),
+    ]
+
+    table = doc.add_table(rows=len(info), cols=2)
     table.style = 'Table Grid'
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
-
-    info = [
-        ('Mata Kuliah',   'Pemrograman Python'),
-        ('Pertemuan',     '5 (Lima)'),
-        ('Topik',         'Struktur Data: String, List, Set, Dictionary & Tuple'),
-        ('Program Studi', 'Teknik Informatika / Sistem Informasi'),
-        ('Semester',      'Ganjil 2024/2025'),
-        ('Tanggal',       '29 Oktober 2026'),
-    ]
 
     for i, (label, value) in enumerate(info):
         row = table.rows[i]
@@ -249,8 +252,8 @@ def bab_dasar_teori(doc):
         ),
     ]
 
-    for nama, penjelasan, contoh in teori:
-        add_heading(doc, f'2.{teori.index((nama, penjelasan, contoh))+1}  {nama}', level=2, font_size=12)
+    for i, (nama, penjelasan, contoh) in enumerate(teori, 1):
+        add_heading(doc, f'2.{i}  {nama}', level=2, font_size=12)
         add_paragraph(doc, penjelasan)
         add_paragraph(doc, 'Contoh penggunaan:', size=11, bold=True)
         add_code_block(doc, contoh)
@@ -683,14 +686,23 @@ def main():
     bab_pembahasan(doc)
     bab_kesimpulan(doc)
 
-    # Simpan file
-    output = os.path.join(
-        r'C:\Users\sobur\Downloads\pemograman_python\pertemuan_5',
-        'Laporan_Pertemuan_5_Pemrograman_Python.docx'
-    )
-    doc.save(output)
-    print(f'[OK] Laporan berhasil disimpan!')
-    print(f'     Path: {output}')
+    # Simpan file di folder pertemuan_5
+    dir_p5 = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pertemuan_5')
+    if not os.path.exists(dir_p5):
+        dir_p5 = os.path.dirname(os.path.abspath(__file__))
+
+    output_1 = os.path.join(dir_p5, 'Laporan_Pertemuan_5_Pemrograman_Python.docx')
+    output_2 = os.path.join(dir_p5, 'Laporan_Praktikum_Pertemuan_5_20241320046_Sobur.docx')
+    output_3 = os.path.join(dir_p5, 'Tugas Teori Pemrograman modern(python)20241320046_sobur_p5.docx')
+
+    doc.save(output_1)
+    doc.save(output_2)
+    doc.save(output_3)
+
+    print(f'[OK] Laporan Pertemuan 5 berhasil disimpan!')
+    print(f'     1. {output_1}')
+    print(f'     2. {output_2}')
+    print(f'     3. {output_3}')
 
 
 if __name__ == '__main__':
