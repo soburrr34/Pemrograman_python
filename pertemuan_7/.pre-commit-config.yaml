@@ -1,0 +1,49 @@
+# ==============================================================================
+# Konfigurasi Pre-Commit Hooks
+# Mata Kuliah: Pemrograman Python
+# Deskripsi: Mengotomasi pemeriksaan kode sebelum git commit:
+#            1. isort  : Pengurutan impor modul sesuai konvensi PEP 8
+#            2. black  : Auto-formattter deterministik kode Python
+#            3. flake8 : Linter statis pemeriksa kepatuhan PEP 8 & potensi bug
+# ==============================================================================
+
+repos:
+  # --- 1. HOOK DASAR DARI PRE-COMMIT ---
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        name: Trim Trailing Whitespace
+      - id: end-of-file-fixer
+        name: Fix End of Files
+      - id: check-yaml
+        name: Check YAML Syntax
+      - id: check-added-large-files
+        name: Check Large Files (>500KB)
+
+  # --- 2. ISORT: PENGURUTAN IMPORT OTOMATIS ---
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (pengurutan import)
+        args: ["--profile", "black", "--filter-files"]
+
+  # --- 3. BLACK: AUTO-FORMATTER KODE PYTHON DETERMINISTIK ---
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        name: black (format gaya kode)
+        language_version: python3
+        args: ["--line-length=88"]
+
+  # --- 4. FLAKE8: LINTER STATIS & PEMERIKSA PEP 8 ---
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        name: flake8 (linter statis PEP 8)
+        # E203 diabaikan karena aturan spasi sebelum titik dua pada black
+        args: ["--max-line-length=88", "--extend-ignore=E203,W503"]
+
